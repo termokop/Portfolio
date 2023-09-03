@@ -8,11 +8,12 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/myPhoto.jpg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Welcome to my portfolio!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Projects</RouterLink>
+        <RouterLink to="/about">About me</RouterLink>
+        <RouterLink to="/education">Education</RouterLink>
       </nav>
     </div>
   </header>
@@ -29,6 +30,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  border-radius: 50%;
 }
 
 nav {
