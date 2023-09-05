@@ -1,86 +1,43 @@
 <script setup>
 import vProjectItem from './vProjectItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+
+import {ref} from 'vue'
+const projects = ref(
+  [
+    {
+      id: 1,
+      title: 'Tbilisea',
+      screen_shot: 'https://www.wbcsd.org/var/site/storage/images/overview/news-insights/wbcsd-insights/accelerating-business-along-the-road-to-a-nature-positive-future/225091-1-eng-GB/Accelerating-business-along-the-road-to-a-nature-positive-future_i1140.jpg',
+      details: 'Selling tickets for DJ-events',
+      link_github: 'https://github.com/'
+    }
+  ]
+)
 </script>
 
 <template>
-  <vProjectItem>
-    <template #screen-shot>
-      <DocumentationIcon />
+  <vProjectItem v-for="project in projects" :key="project.id">
+    <template #title>
+      <h2>{{project.title}}</h2>  
     </template>
-    <template #heading>Documentation</template>
+    <template #screen-shot>
+      <img :src="project.screen_shot" :alt="project.title">
+    </template>
+    <template #links>
+      <a :href="project.link_github" target="_blank">Github</a>  
+    </template>
 
     Vue’s
     <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
     provides you with all information you need to get started.
   </vProjectItem>
 
-  <vProjectItem>
-    <template #screen-shot>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank">Cypress Component Testing</a>.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </vProjectItem>
-
-  <vProjectItem>
-    <template #screen-shot>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </vProjectItem>
-
-  <vProjectItem>
-    <template #screen-shot>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </vProjectItem>
-
-  <vProjectItem>
-    <template #screen-shot>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </vProjectItem>
 </template>
+
+<style scoped>
+
+img {
+  width: 100%;
+}
+
+</style>
