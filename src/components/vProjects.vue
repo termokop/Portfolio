@@ -9,28 +9,40 @@ const projects = ref(
       title: 'Tbilisea',
       screen_shot: 'https://www.wbcsd.org/var/site/storage/images/overview/news-insights/wbcsd-insights/accelerating-business-along-the-road-to-a-nature-positive-future/225091-1-eng-GB/Accelerating-business-along-the-road-to-a-nature-positive-future_i1140.jpg',
       details: 'Selling tickets for DJ-events',
-      link_github: 'https://github.com/'
+      link_github: 'https://github.com/',
+      link_project: 'https://ukrge.site/tbilisea/'
+    },
+    {
+      id: 2,
+      title: 'House Keeping',
+      screen_shot: 'https://www.wbcsd.org/var/site/storage/images/overview/news-insights/wbcsd-insights/accelerating-business-along-the-road-to-a-nature-positive-future/225091-1-eng-GB/Accelerating-business-along-the-road-to-a-nature-positive-future_i1140.jpg',
+      details: 'App to make housekeeping work more effective',
+      link_github: 'https://github.com/',
+      link_project: 'https://ukrge.site/housekeeping/'
     }
   ]
 )
 </script>
 
 <template>
-  <vProjectItem v-for="project in projects" :key="project.id">
-    <template #title>
-      <h2>{{project.title}}</h2>  
-    </template>
-    <template #screen-shot>
-      <img :src="project.screen_shot" :alt="project.title">
-    </template>
-    <template #links>
-      <a :href="project.link_github" target="_blank">Github</a>  
-    </template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </vProjectItem>
+  <div class="projects-view">
+    <vProjectItem v-for="project in projects" :key="project.id">
+      <template #title>
+        <h2>{{project.title}}</h2>  
+      </template>
+      <template #screen-shot>
+        <img :src="project.screen_shot" :alt="project.title">
+      </template>
+      <template #links>
+        <a :href="project.link_github" target="_blank">Github</a>  
+        <a :href="project.link_project" target="_blank">Project</a>
+        <a href="#">Details</a>
+      </template>
+        <p>
+          {{ project.details }}
+        </p>
+    </vProjectItem>
+  </div>
 
 </template>
 
@@ -38,6 +50,10 @@ const projects = ref(
 
 img {
   width: 100%;
+}
+
+.projects-view {
+  display: flex;
 }
 
 </style>

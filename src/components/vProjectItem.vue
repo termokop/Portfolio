@@ -1,16 +1,27 @@
+<script setup>
+
+  const zoom_picture = () => {
+    alert('Zoom picture!')
+  }
+
+</script>
+
+
 <template>
   <div class="item">
     <div class="title">
       <slot name="title"></slot>
     </div>
-    <div class="screen-shot">
+    <div class="screen-shot" @click="zoom_picture()">
       <slot name="screen-shot"></slot>
     </div>
     <div class="details">
-      <h3>
+      <div class="links">
         <slot name="links"></slot>
-      </h3>
-      <slot></slot>
+      </div>
+      <div class="description">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +33,25 @@
   height: 300px;
 }
 
-.details {
+.title {
+  width: fit-content;
+  margin: auto;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.description {
+  width: fit-content;
+  margin: auto;
 }
 
 .screen-shot {
   width: 320px;
+  margin: auto;
 }
 
 h3 {
