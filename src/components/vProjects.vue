@@ -54,6 +54,7 @@ img {
 
 .projects-view {
   display: flex;
+  flex-wrap: wrap;
 }
 
 </style>

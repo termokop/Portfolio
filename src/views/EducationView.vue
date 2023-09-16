@@ -1,6 +1,12 @@
+<script setup>
+
+  import vEducationInfo from '../components/vEducationInfo.vue';
+
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an Education page</h1>
+    <vEducationInfo></vEducationInfo>
   </div>
 </template>
 
