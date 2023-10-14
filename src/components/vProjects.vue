@@ -8,7 +8,7 @@ const projects = ref(
       id: 1,
       title: 'Tbilisea',
       screen_shot: 'https://www.wbcsd.org/var/site/storage/images/overview/news-insights/wbcsd-insights/accelerating-business-along-the-road-to-a-nature-positive-future/225091-1-eng-GB/Accelerating-business-along-the-road-to-a-nature-positive-future_i1140.jpg',
-      details: 'Selling tickets for DJ-events',
+      description: 'Selling tickets for DJ-events',
       link_github: 'https://github.com/',
       link_project: 'https://ukrge.site/tbilisea/'
     },
@@ -16,7 +16,7 @@ const projects = ref(
       id: 2,
       title: 'House Keeping',
       screen_shot: 'https://www.wbcsd.org/var/site/storage/images/overview/news-insights/wbcsd-insights/accelerating-business-along-the-road-to-a-nature-positive-future/225091-1-eng-GB/Accelerating-business-along-the-road-to-a-nature-positive-future_i1140.jpg',
-      details: 'App to make housekeeping work more effective',
+      description: 'App to make housekeeping work more effective',
       link_github: 'https://github.com/',
       link_project: 'https://ukrge.site/housekeeping/'
     }
@@ -39,7 +39,7 @@ const projects = ref(
         <a href="#">Details</a>
       </template>
         <p>
-          {{ project.details }}
+          {{ project.description }}
         </p>
     </vProjectItem>
   </div>

@@ -9,19 +9,12 @@
 
 <template>
   <div class="item">
-    <div class="title">
-      <slot name="title"></slot>
-    </div>
+
     <div class="screen-shot" @click="zoom_picture()">
       <slot name="screen-shot"></slot>
     </div>
-    <div class="details">
-      <div class="links">
-        <slot name="links"></slot>
-      </div>
-      <div class="description">
-        <slot></slot>
-      </div>
+    <div class="title">
+      <slot name="title"></slot>
     </div>
   </div>
 </template>
@@ -52,6 +45,7 @@
 .screen-shot {
   width: 320px;
   margin: auto;
+  height: 240px;
 }
 
 h3 {
@@ -61,7 +55,7 @@ h3 {
   color: var(--color-heading);
 }
 
-/* @media (min-width: 1024px) {
+ @media (min-width: 1024px) {
   .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
@@ -93,5 +87,5 @@ h3 {
   .item:last-of-type:after {
     display: none;
   }
-} */
+} 
 </style>

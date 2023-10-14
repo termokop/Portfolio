@@ -7,6 +7,7 @@ const education_arr = ref([
     {
         id: 1,
         link: 'https://certs.prometheus.org.ua/downloads/d1d47c77eda34249a1b882a0652f5752/Certificate.pdf',
+        img_path: 'src/assets/certificates/WebUI2022_Promet.png',
         title: 'Basic of Web UA Development 2022',
         gain_date: 'October 9, 2022',
         school_title: 'Prometheus',
@@ -15,6 +16,7 @@ const education_arr = ref([
     {
         id: 2,
         link: 'https://www.sololearn.com/certificates/CC-4I0BVHKN',
+        img_path: 'src/assets/certificates/html_SL.png',
         title: 'HTML',
         gain_date: 'October 11, 2023',
         school_title: 'SoloLearn',
@@ -23,6 +25,7 @@ const education_arr = ref([
     {
         id: 3,
         link: 'https://www.sololearn.com/certificates/CC-KPGMZUQS',
+        img_path: 'src/assets/certificates/JS_SL.png',
         title: 'JavaScript',
         gain_date: 'October 9, 2023',
         school_title: 'SoloLearn',
@@ -31,6 +34,7 @@ const education_arr = ref([
     {
         id: 4,
         link: 'https://www.sololearn.com/certificates/CC-8XJSN23P',
+        img_path: 'src/assets/certificates/JSInterm_SL.png',
         title: 'JavaScript Intermediate',
         gain_date: 'October 13, 2023',
         school_title: 'SoloLearn',
@@ -39,6 +43,7 @@ const education_arr = ref([
     {
         id: 5,
         link: 'https://certs.prometheus.org.ua/downloads/48fa809162f04343a629859a79523d5d/Certificate.pdf',
+        img_path: 'src/assets/certificates/WebUI_Promet.png',
         title: 'Basic of Web UA Development',
         gain_date: 'July 24, 2017',
         school_title: 'Prometheus',
@@ -50,10 +55,22 @@ const education_arr = ref([
 
 <template>
     
-    <vEducationItem>
+    <vEducationItem v-for="certificate of education_arr" :key="certificate.id">
+        <template #title>
+            {{certificate.title}}
+        </template>
+        <template #screen-shot>
+            <img class="certificate-img" :src="certificate.img_path" :alt="certificate.title"/>
+        </template>
 
     </vEducationItem>
-    
-    
-            {{ education_arr[0].link }}
 </template>
+
+<style scope>
+
+    .certificate-img {
+        width: 100%;
+        border: black 1px solid;
+    }
+
+</style>
