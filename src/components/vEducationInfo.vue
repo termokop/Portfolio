@@ -48,22 +48,32 @@ const education_arr = ref([
         gain_date: 'July 24, 2017',
         school_title: 'Prometheus',
         school_link: 'https://prometheus.org.ua'
+    },
+    {
+        id: 6,
+        link: 'https://www.sololearn.com/certificates/CC-FDNRLWMO',
+        img_path: 'src/assets/certificates/GameDevWJS_SL.png',
+        title: 'Game Development with JS',
+        gain_date: 'October 17, 2023',
+        school_title: 'SoloLearn',
+        school_link: 'https://www.sololearn.com/'
     }
 ])
 
 </script>
 
 <template>
+    <div class="education-info">
+        <vEducationItem v-for="certificate of education_arr" :key="certificate.id">
+            <template #title>
+                {{certificate.title}}
+            </template>
+            <template #screen-shot>
+                <img class="certificate-img" :src="certificate.img_path" :alt="certificate.title"/>
+            </template>
+        </vEducationItem>
+    </div>
     
-    <vEducationItem v-for="certificate of education_arr" :key="certificate.id">
-        <template #title>
-            {{certificate.title}}
-        </template>
-        <template #screen-shot>
-            <img class="certificate-img" :src="certificate.img_path" :alt="certificate.title"/>
-        </template>
-
-    </vEducationItem>
 </template>
 
 <style scope>
@@ -71,6 +81,11 @@ const education_arr = ref([
     .certificate-img {
         width: 100%;
         border: black 1px solid;
+    }
+    .education-info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 </style>
