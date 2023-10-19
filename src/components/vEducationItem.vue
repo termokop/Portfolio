@@ -1,16 +1,12 @@
 <script setup>
 
-  const zoom_picture = () => {
-    alert('Zoom picture!')
-  }
-
 </script>
 
 
 <template>
   <div class="item">
 
-    <div class="screen-shot" @click="zoom_picture()">
+    <div class="screen-shot">
       <slot name="screen-shot"></slot>
     </div>
     <div class="title">
@@ -22,9 +18,14 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  width: 400px;
-  height: 300px;
 }
+
+
+.item:hover {
+        background-color: #3d3d3d;
+        border-end-end-radius: 20px;
+        border-end-start-radius: 20px;
+    }
 
 .title {
   width: fit-content;
@@ -43,9 +44,7 @@
 }
 
 .screen-shot {
-  width: 320px;
-  margin: auto;
-  height: 240px;
+  width: 100%;
 }
 
 h3 {
@@ -57,35 +56,9 @@ h3 {
 
  @media (min-width: 1024px) {
   .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    padding: .5rem;
+    width: 400px;
   }
 
-
-  .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
-} 
+}
 </style>

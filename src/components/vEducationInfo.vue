@@ -3,7 +3,20 @@
 import vEducationItem from './vEducationItem.vue';
 import {ref} from 'vue';
 
+const openLink = link => {
+    window.open(link)
+}
+
 const education_arr = ref([
+{
+        id: 0,
+        link: 'src/assets/Diplomas/PNPU.png',
+        img_path: 'src/assets/Diplomas/PNPU_sm.jpg',
+        title: 'Teacher of physics',
+        gain_date: 'June 30, 2018',
+        school_title: 'PNPU',
+        school_link: 'https://pnpu.edu.ua/'
+    },
     {
         id: 1,
         link: 'https://certs.prometheus.org.ua/downloads/d1d47c77eda34249a1b882a0652f5752/Certificate.pdf',
@@ -69,7 +82,7 @@ const education_arr = ref([
                 {{certificate.title}}
             </template>
             <template #screen-shot>
-                <img class="certificate-img" :src="certificate.img_path" :alt="certificate.title"/>
+                <img class="certificate-img" :src="certificate.img_path" :alt="certificate.title" @click="openLink(certificate.link)"/>
             </template>
         </vEducationItem>
     </div>
@@ -83,9 +96,12 @@ const education_arr = ref([
         border: black 1px solid;
     }
     .education-info {
+        margin: 0;
+        padding: 0;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        cursor: pointer;
     }
 
 </style>
