@@ -3,7 +3,7 @@
 #app {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: #1d1d1d;
   font-weight: normal;
 }

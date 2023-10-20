@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Greeting from './components/vGreeting.vue'
+import vShortInfo from './components/vShortInfo.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import Greeting from './components/vGreeting.vue'
     <img alt="Picture" class="logo" src="@/assets/myPhoto.jpg" width="150" height="150" />
 
     <div class="wrapper">
-      <Greeting msg="Web Developer" />
+      <v-short-info role="Web Developer" />
 
       <nav>
         <RouterLink to="/">Projects</RouterLink>
@@ -24,7 +24,9 @@ import Greeting from './components/vGreeting.vue'
 <style scoped>
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  width: fit-content;
+  margin: auto;
+  padding: 0;
 }
 
 .logo {
@@ -37,7 +39,8 @@ nav {
   width: 100%;
   font-size: 16px;
   text-align: center;
-  margin-top: 2rem;
+  margin: auto;
+  padding-top: 1rem;
 }
 
 nav a.router-link-exact-active {
@@ -62,7 +65,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+   /* padding-right: calc(var(--section-gap) / 2);*/
   }
 
   .logo {
@@ -79,9 +82,6 @@ nav a:first-of-type {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
