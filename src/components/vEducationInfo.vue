@@ -101,6 +101,7 @@ const education_arr = ref([
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         cursor: pointer;
     }
 

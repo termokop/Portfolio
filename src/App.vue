@@ -5,10 +5,10 @@ import Greeting from './components/vGreeting.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/myPhoto.jpg" width="125" height="125" />
+    <img alt="Picture" class="logo" src="@/assets/myPhoto.jpg" width="150" height="150" />
 
     <div class="wrapper">
-      <Greeting msg="Welcome to my portfolio!" />
+      <Greeting msg="Web Developer" />
 
       <nav>
         <RouterLink to="/">Projects</RouterLink>
