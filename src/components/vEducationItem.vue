@@ -18,6 +18,7 @@
 <style scoped>
 .item {
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 

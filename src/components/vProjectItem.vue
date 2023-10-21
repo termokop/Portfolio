@@ -29,8 +29,7 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  width: 400px;
-  height: 300px;
+  width: 100%;
 }
 
 .title {
@@ -50,7 +49,7 @@
 }
 
 .screen-shot {
-  width: 320px;
+  width: 100%;
   margin: auto;
 }
 
@@ -61,37 +60,10 @@ h3 {
   color: var(--color-heading);
 }
 
-/* @media (min-width: 1024px) {
+ @media (min-width: 1024px) {
   .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    width: 400px;
+    padding: 0.5rem;
   }
-
-
-  .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
-} */
+}
 </style>
