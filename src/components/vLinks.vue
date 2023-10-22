@@ -1,6 +1,5 @@
 <script setup>
 
-// import { ref } from 'vue';
 import IconSoloLearn from './icons/IconSoloLearn.vue'
 import IconCodeWars from './icons/IconCodeWars.vue'
 import IconGitHub from './icons/IconGitHub.vue'
@@ -39,7 +38,7 @@ import IconGMail from './icons/IconGMail.vue'
                 <a class="green" href="https://www.linkedin.com/in/yurii-hruba-085b7a22b/" target="_blank"><IconLinkedIn></IconLinkedIn></a>    
             </li> 
             <li>
-                <a class="green" href="mailto:termokop564@gmail.com" target="_blank"><IconGMail></IconGMail></a>    
+                <a class="green" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=termokop564@gmail.com" target="_blank"><IconGMail></IconGMail></a>    
             </li> 
         </ul>
     </div>
@@ -49,9 +48,9 @@ import IconGMail from './icons/IconGMail.vue'
 <style scoped>
 
 .links {
-    width: 30%;
-    margin: auto;
+    margin-top: 20px;
 }
+
 
 ul {
     padding: 0;
@@ -73,6 +72,19 @@ a {
 
 .contacts li a {
     width: 24%;
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media (min-width: 1024px) {
+    .links {
+    width: 30%;
+    margin: auto;
+}
 }
 
 </style>

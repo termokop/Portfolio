@@ -1,6 +1,6 @@
 <script setup>
 
-import vLinks from '../components/vLinks.vue';
+import vAboutMe from '../components/vAboutMe.vue';
 
 
 </script>
@@ -8,10 +8,15 @@ import vLinks from '../components/vLinks.vue';
 <template>
   <div class="about">
 
-    <v-links></v-links>
+    <v-about-me></v-about-me>
   </div>
 </template>
 
 <style>
+
+</style>
+
+<style scoped>
+
 
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import vShortInfo from './components/vShortInfo.vue'
+import vLinks from './components/vLinks.vue';
 </script>
 
 <template>
@@ -19,6 +20,9 @@ import vShortInfo from './components/vShortInfo.vue'
   </header>
 
   <RouterView />
+
+  <v-links></v-links>
+
 </template>
 
 <style scoped>
