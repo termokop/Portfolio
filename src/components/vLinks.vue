@@ -48,7 +48,14 @@ import IconGMail from './icons/IconGMail.vue'
 <style scoped>
 
 .links {
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    box-sizing: content-box;
+    padding: 10px;
+    height: 180px;
+    width: 300px;
+    transform: scale(1, 1);
+    margin: 0;
+
 }
 
 
@@ -82,8 +89,7 @@ h3{
 
 @media (min-width: 1024px) {
     .links {
-    width: 30%;
-    margin: auto;
+    width: 400px;
 }
 }
 

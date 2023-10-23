@@ -18,10 +18,16 @@ import vLinks from './components/vLinks.vue';
       </nav>
     </div>
   </header>
+  <div class="content">
+    <RouterView />
+  </div>
 
-  <RouterView />
 
-  <v-links></v-links>
+
+  <footer>
+    <v-links></v-links>
+  </footer>
+
 
 </template>
 
@@ -65,11 +71,45 @@ nav a:first-of-type {
   border: 0;
 }
 
+footer {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  bottom: 0;
+  max-width: 1360px;
+  width: 100%;
+  padding: 0;
+  height: 180px;
+}
+
+.content {
+  margin-bottom: 0;
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
    /* padding-right: calc(var(--section-gap) / 2);*/
+  }
+
+  footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  bottom: -10px;
+  max-width: 1360px;
+  width: 100%;
+  padding: 0;
+  height: 180px;
+  margin-bottom: 10px;
+  background-color: #1d1d1d;
+}
+
+  .content {
+    margin-bottom: 180px;
   }
 
   .logo {
