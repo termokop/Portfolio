@@ -111,7 +111,6 @@ footer {
   .content {
     margin-bottom: 180px;
   }
-
   .logo {
     margin: 0 2rem 0 0;
   }
