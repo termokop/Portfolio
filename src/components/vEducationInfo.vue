@@ -70,7 +70,25 @@ const education_arr = ref([
         gain_date: 'October 17, 2023',
         school_title: 'SoloLearn',
         school_link: 'https://www.sololearn.com/'
-    }
+    },
+    {
+        id: 7,
+        link: 'https://www.sololearn.com/certificates/CC-LSFSVW9V',
+        img_path: 'src/assets/certificates/Int_to_Java.png',
+        title: 'Introduction to Java',
+        gain_date: 'November 11, 2023',
+        school_title: 'SoloLearn',
+        school_link: 'https://www.sololearn.com/'
+    },
+    {
+        id: 8,
+        link: 'https://www.sololearn.com/certificates/CC-5RR63DAY',
+        img_path: 'src/assets/certificates/Int_to_CSS.png',
+        title: 'Introduction to CSS',
+        gain_date: 'October 24, 2023',
+        school_title: 'SoloLearn',
+        school_link: 'https://www.sololearn.com/'
+    },
 ])
 
 </script>
